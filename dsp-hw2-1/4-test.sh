@@ -9,13 +9,13 @@ test_feat=feat/test.39.cmvn.ark
 
 
 ### parameters that you can modify
-opt_acwt=0.87
-test_beam=15.0
+opt_acwt=0.19
+test_beam=11.0
 ###
 
 mkdir -p $dir
 mkdir -p $dir/log
-
+echo $test_beam
 echo "Converting acoustic models to HTK format"
 if [ ! -f $dir/final.mmf ] || [ ! -f $dir/tiedlist ]; then
   log=$dir/log/am.to.htk.log
@@ -57,3 +57,4 @@ sec=$SECONDS
 echo ""
 echo "Execution time for whole script = `utility/timer.pl $sec`"
 echo ""
+
